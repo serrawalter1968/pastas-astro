@@ -169,9 +169,23 @@ nav {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(180deg, var(--color-light) 0%, var(--color-cream) 100%);
   overflow: hidden;
   padding-top: 80px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(44, 24, 16, 0.7) 0%,
+    rgba(44, 24, 16, 0.5) 50%,
+    rgba(44, 24, 16, 0.65) 100%
+  );
+  z-index: 1;
 }
 
 .hero::before {
@@ -185,6 +199,7 @@ nav {
     radial-gradient(circle at 20% 80%, rgba(201, 169, 98, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.06) 0%, transparent 50%);
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero::after {
@@ -207,13 +222,13 @@ nav {
 .hero h1 {
   font-size: 4.5rem;
   margin-bottom: 1.5rem;
-  color: var(--color-secondary);
+  color: var(--color-light);
   font-weight: 400;
   letter-spacing: -0.02em;
 }
 
 .hero h1 span {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   font-style: italic;
 }
 
@@ -223,15 +238,14 @@ nav {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--color-text);
-  opacity: 0.8;
+  color: rgba(255, 254, 251, 0.9);
   font-weight: 300;
 }
 
 .pasta-icon {
   font-size: 4rem;
   margin-bottom: 1.5rem;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 @keyframes fadeInUp {
