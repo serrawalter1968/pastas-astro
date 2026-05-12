@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+  <section class="hero-small">
+    <div class="hero-content">
+      <div class="pasta-icon" style="font-size: 3rem;">📞</div>
+      <h1 style="font-size: 3rem;">Escríbenos</h1>
+      <p style="font-size: 1.1rem;">
+        Estamos listos para responder todas tus consultas
+      </p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-divider"></div>
+    <div class="contact-section">
+      <div class="contact-form">
+        <h2 style="margin-bottom: 1.5rem; color: var(--color-secondary);">
+          Envíanos un mensaje
+        </h2>
+        <form>
+          <div class="form-group">
+            <label for="nombre">Tu Nombre</label>
+            <input type="text" id="nombre" placeholder="Juan Pérez" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Tu Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="juan@email.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" placeholder="+54 9 11 1234 5678" />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Tu Mensaje</label>
+            <textarea
+              id="mensaje"
+              rows="5"
+              placeholder="¿En qué podemos ayudarte?"
+              required></textarea>
+          </div>
+          <button type="submit" class="btn" style="width: 100%;"
+            >Enviar Mensaje</button
+          >
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2 style="margin-bottom: 1.5rem; color: var(--color-secondary);">
+          Información de Contacto
+        </h2>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <h4>Dirección</h4>
+            <p>Avenida del Rio 1234, Buenos Aires</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <h4>Teléfono</h4>
+            <p>+54 9 11 1234 5678</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>hola@pastaarte.com.ar</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div>
+            <h4>Horario de Atención</h4>
+            <p>Lunes a Sábado: 8:00 - 20:00</p>
+            <p>Domingos: 9:00 - 14:00</p>
+          </div>
+        </div>
+
+        <div class="whatsapp-box">
+          <h4>💬 WhatsApp</h4>
+          <p>Escríbenos directamente al +54 9 11 1234 5678</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--color-cream);">
+    <div class="container" style="text-align: center;">
+      <div class="section-divider"></div>
+      <h2 class="section-title">Visítanos</h2>
+      <p class="section-subtitle">
+        Te esperamos en nuestra fábrica para que pruebes nuestras pastas
+      </p>
+      <div class="map-container">
+        <p>🗺️</p>
+        <p>Vereda Principal 1234</p>
+        <p>Buenos Aires, Argentina</p>
+      </div>
+    </div>
+  </section>
+</Layout>

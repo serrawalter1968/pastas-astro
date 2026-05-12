@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const products = [
+  {
+    id: 1,
+    name: 'Fideos Caseros',
+    description: 'Pasta fresca tradicional elaborada con harina de trigo y huevo. Textura perfecta y sabor auténtico.',
+    image: '/images/pastas 01.jpg',
+    badge: 'El Clásico',
+    precio: 2500
+  },
+  {
+    id: 2,
+    name: 'Ravioles de Ricotta',
+    description: 'Delicados ravioles rellenos con ricotta fresca, mozzarella y hierbas italiana. Cremosos y irresistibles.',
+    image: '/images/pastas 02.jpg',
+    badge: 'Más Vendido',
+    precio: 3200
+  },
+  {
+    id: 3,
+    name: 'Tallarines al Huevo',
+    description: 'Fideos largos y dorados cortados a mano. Ideales para salsas tradicionales italianas.',
+    image: '/images/pastas 03.jpg',
+    badge: 'Artesanal',
+    precio: 2400
+  },
+  {
+    id: 4,
+    name: 'Sorrentinos de Jamón',
+    description: 'Grandes medialunas rellenas con jamón y queso. Una explosión de sabor en cada bocado.',
+    image: '/images/pastas 04.jpg',
+    badge: 'Favorito',
+    precio: 3500
+  },
+  {
+    id: 5,
+    name: 'Fideos de Espinaca',
+    description: 'Pasta de color verde intenso con espinacas frescas. Más nutritiva y visualmente atractiva.',
+    image: '/images/pastas 05.jpg',
+    badge: 'Natural',
+    precio: 2700
+  },
+  {
+    id: 6,
+    name: 'Ñoquis de Papa',
+    description: 'Suaves y esponjosos ñoquis tradicionales. Legendaria receta italiana para los domingos en familia.',
+    image: '/images/pastas 06.jpg',
+    badge: 'Tradición',
+    precio: 2800
+  },
+  {
+    id: 7,
+    name: 'Lasagna Artesanal',
+    description: 'Capas de pasta fresca, salsa boloñesa casera, bechamel y queso. El comfort food italiano.',
+    image: '/images/pastas 07.jpg',
+    badge: 'Premium',
+    precio: 4500
+  },
+  {
+    id: 8,
+    name: 'Canelones',
+    description: 'Tubos de pasta rellenos con carne, pollo o verduras. Gratificados con salsa bechamel y queso.',
+    image: '/images/pastas 08.jpg',
+    badge: 'Casero',
+    precio: 3800
+  }
+];
+---
+
+<Layout title="Productos">
+  <section class="hero-small">
+    <div class="hero-content">
+      <div class="pasta-icon" style="font-size: 3rem;">🌾</div>
+      <h1 style="font-size: 3rem;">Nuestros <span>Sabores</span></h1>
+      <p style="font-size: 1.1rem;">Descubre la variedad de pastas artesanales que tenemos para ti</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-divider"></div>
+    <div class="products-grid">
+      {products.map(product => (
+        <div class="product-card">
+          <div class="product-image">
+            <img src={product.image} alt={product.name} />
+          </div>
+          <div class="product-content">
+            <span class="badge">{product.badge}</span>
+            <h3>{product.name}</h3>
+            <p class="product-description">{product.description}</p>
+            <div class="product-price-row">
+              <span class="product-price">${product.precio.toLocaleString()}</span>
+              <button class="agregar-carrito-btn" onclick={`agregarAlCarrito({id: ${product.id}, nombre: '${product.name}', precio: ${product.precio}, imagen: '${product.image}'})`}>
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 style="color: var(--color-light);">¿No encuentras lo que buscas?</h2>
+      <p style="opacity: 0.9;">Contáctanos y te ayudamos a encontrar tu pasta ideal</p>
+      <a href="/contacto" class="btn" style="background: white; color: var(--color-secondary);">Escríbenos</a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="pasta-icon">🍝</div>
+      <h1>Pastas <span>Artesanales</span></h1>
+      <p>Elaboradas con recetas tradicionales italianas, masa fresca diaria y los mejores ingredientes seleccionados</p>
+      <a href="/productos" class="btn">Descubrir Sabores</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-divider"></div>
+    <h2 class="section-title">Nuestra Esencia</h2>
+    <p class="section-subtitle">Tres pilares que definen nuestro arte</p>
+    
+    <div class="features">
+      <div class="feature-card">
+        <span class="feature-icon">👨‍🍳</span>
+        <h3>Artesanía Pure</h3>
+        <p>Cada pieza es elaborada a mano con dedicación y tradición, preservando técnicas ancestrales</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🌾</span>
+        <h3>Ingredientes Selectos</h3>
+        <p>Solo utilizamos ingredientes naturales de la mejor calidad, seleccionados personalmente</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">❤️</span>
+        <h3>Herencia Familiar</h3>
+        <p>Recetas transmitidas de generación en generación, con el mismo amor de siempre</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--color-cream);">
+    <div class="container">
+      <div class="section-divider"></div>
+      <h2 class="section-title">Selección Especial</h2>
+      <p class="section-subtitle">Descubre nuestras creaciones más apreciadas</p>
+      
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/pastas 01.jpg" alt="Fideos Caseros" />
+          </div>
+          <div class="product-content">
+            <span class="badge">Clásico</span>
+            <h3>Fideos Caseros</h3>
+            <p class="product-description">Pasta fresca tradicional con huevo, textura perfecta y sabor inconfundible</p>
+            <div class="product-price-row">
+              <span class="product-price">$2.500</span>
+              <button class="agregar-carrito-btn" onclick="agregarAlCarrito({id: 1, nombre: 'Fideos Caseros', precio: 2500, imagen: '/images/pastas 01.jpg'})">
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/pastas 02.jpg" alt="Ravioles de Ricotta" />
+          </div>
+          <div class="product-content">
+            <span class="badge">Destacado</span>
+            <h3>Ravioles de Ricotta</h3>
+            <p class="product-description">Rellenos suaves con ricotta fresca y hierbas aromáticas de nuestra huerta</p>
+            <div class="product-price-row">
+              <span class="product-price">$3.200</span>
+              <button class="agregar-carrito-btn" onclick="agregarAlCarrito({id: 2, nombre: 'Ravioles de Ricotta', precio: 3200, imagen: '/images/pastas 02.jpg'})">
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/pastas 03.jpg" alt="Tallarines al Huevo" />
+          </div>
+          <div class="product-content">
+            <span class="badge">Popular</span>
+            <h3>Tallarines al Huevo</h3>
+            <p class="product-description">Cortados a mano, dorados naturalmente y con sabor intenso y auténtico</p>
+            <div class="product-price-row">
+              <span class="product-price">$2.400</span>
+              <button class="agregar-carrito-btn" onclick="agregarAlCarrito({id: 3, nombre: 'Tallarines al Huevo', precio: 2400, imagen: '/images/pastas 03.jpg'})">
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/pastas 05.jpg" alt="Fideos de Espinaca" />
+          </div>
+          <div class="product-content">
+            <span class="badge">Especial</span>
+            <h3>Fideos de Espinaca</h3>
+            <p class="product-description">Pasta verde con espinacas frescas, nutritiva y visualmente fascinante</p>
+            <div class="product-price-row">
+              <span class="product-price">$2.700</span>
+              <button class="agregar-carrito-btn" onclick="agregarAlCarrito({id: 5, nombre: 'Fideos de Espinaca', precio: 2700, imagen: '/images/pastas 05.jpg'})">
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="/productos" class="btn">Explorar Catálogo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para Disfrutar?</h2>
+      <p>Contáctanos y descubre por qué nuestros clientes nos eligen cada semana</p>
+      <a href="/contacto" class="btn">Conversemos</a>
+    </div>
+  </section>
+</Layout>
